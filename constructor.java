@@ -23,6 +23,8 @@ public class constructor {
         student st2=new student(scan.next(),scan.nextInt());
         st.showdata();
         st2.showdata();
+        scan.close();
+        scan.close();
 
     }
     

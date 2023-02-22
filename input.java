@@ -16,7 +16,7 @@ public class input
         System.out.println("enter a string");
         String name=scan.next();
         System.out.println("string is "+name);
-        
+        scan.close();
 }
 
 }
