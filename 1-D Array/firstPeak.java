@@ -21,7 +21,7 @@ public class firstPeak {
     }
     public static void main(String[] args) {
         int arr[]={1,4,7,3,2,3,5};
-        int n=arr.length,peak=0;
+        int n=arr.length;
         System.out.println("First peak element is "+arr[peakele(arr, n)]);
         
     }

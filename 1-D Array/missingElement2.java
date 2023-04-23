@@ -10,7 +10,7 @@ public class missingElement2 {
         return total;
     }
     public static void main(String[] args) {
-        int arr[]={2,3,4,5,7,6};
+        int arr[]={7,3,4,5,2,6};
         int size=arr.length;
         System.out.println("Missing number is "+missingNumber(arr, size));
     }
