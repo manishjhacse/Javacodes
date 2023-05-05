@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class powerOptimized {
-    public static long power_of_n(int a, int b) {
-        long res = 0, finalres = 0;
+    public static int power_of_n(int a, int b) {
+        int res = 0, finalres = 0;
         int mid = 0;
         if (b == 0) {
             return 1;
@@ -26,7 +26,7 @@ public class powerOptimized {
         System.out.println("enter the number and it's power: ");
         int n = sc.nextInt();
         int a = sc.nextInt();
-        long power = power_of_n(n, a);
+        int power = power_of_n(n, a);
         System.out.println("result: " + power);
         sc.close();
     }
