@@ -4,7 +4,11 @@ public class powerBigger {
     public static BigInteger findPower(BigInteger a,int b)
     {
         BigInteger res,finalres;
-        if(b==1)
+        if(b==0)
+        {
+            return BigInteger.valueOf(1);
+        }
+        else if(b==1)
         {
             return a;
         }
