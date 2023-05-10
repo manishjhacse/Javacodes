@@ -1,3 +1,4 @@
+// Q.) given a board of size "2*n" and tiles of size "2*1", count the number of ways to tile the given board.
 import java.util.*;
 public class TilesProblem {
     public static int total_Ways(int n)
