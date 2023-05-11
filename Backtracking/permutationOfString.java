@@ -30,6 +30,6 @@ public class permutationOfString {
         String s=sc.next();
         System.out.println("All permutations of "+s+" string is:");
         permute(s, 0, s.length()-1);
-        sc.close();        
+        sc.close();         
     }
 }
