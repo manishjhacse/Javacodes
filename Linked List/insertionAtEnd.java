@@ -18,7 +18,7 @@ class insertionAtEnd {
 
         // LinkedList is empty
         if(head == null){
-            head = new Node(newData);
+            head = newNode;
             return;
         }
 
