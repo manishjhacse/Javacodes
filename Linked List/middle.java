@@ -47,7 +47,7 @@ public class middle {
         ll.print_Nodes();
         ll.middle_Of_Linkedlist();
         int middle_element=ll.middle_Of_Linkedlist();
-        System.out.print("Middle of linked list is: "+middle_element);
+        System.out.print("Middle of data of linked list is: "+middle_element);
     }
 
 }
