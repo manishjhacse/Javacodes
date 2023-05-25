@@ -10,6 +10,7 @@ public class reversal {
         }
     }
     
+    
     public void reverse()
     {
         Node current=head;
