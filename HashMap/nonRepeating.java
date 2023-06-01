@@ -8,7 +8,7 @@ public class nonRepeating {
         for(int i=0;i<str.length();i++)
         {
             if(map.containsKey(str.charAt(i)))
-            {
+            { 
                 map.put(str.charAt(i), map.get(str.charAt(i))+1);
             }
             else{
