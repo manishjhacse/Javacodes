@@ -1,6 +1,6 @@
 public class maxHistogramArea {
     public static void main(String[] args) {
-        int arr[]={2,1,5,6,2,3};
+        int arr[]={2,1,5,6,2,3 };
         int n=arr.length;
         int prev_smaller[]=new int[n],next_smaller[]=new int[n];
         for(int i=0;i<n;i++)
