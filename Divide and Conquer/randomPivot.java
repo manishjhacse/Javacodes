@@ -1,7 +1,12 @@
 import java.util.*;
-public class QuickSort {
+public class randomPivot {
     public static int partition(int arr[],int l,int h)
     {
+        int randomIndex =l+(int) Math.random() % (h-l+1);
+
+        int temp= arr[randomIndex];
+        arr[randomIndex]=arr[l];
+        arr[l]=temp;
         int i=l;
         int pivot=arr[l];
         for(int j=l+1;j<=h;j++)
@@ -9,22 +14,22 @@ public class QuickSort {
             if(arr[j]<pivot)
             {
                 i++;
-                int temp=arr[i];
+                temp=arr[i];
                 arr[i]=arr[j];
                 arr[j]=temp;
             }
         }
-        int temp=pivot;
-        arr[l]=arr[i];
-        arr[i]=temp;
+        temp=arr[i];
+        arr[i]=arr[l];
+        arr[l]=temp;
         return i;
     }
-    public static void quick_Sort(int []arr,int l,int h)
+    public static void quick_Sort(int arr[],int l,int h)
     {
         if(l<h)
         {
             int m=partition(arr,l,h);
-            quick_Sort(arr,l,m-1);
+            quick_Sort(arr, l, m-1);
             quick_Sort(arr, m+1, h);
         }
     }
