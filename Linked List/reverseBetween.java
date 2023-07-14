@@ -9,39 +9,32 @@ public class reverseBetween {
             next=null;
         }
     }
-    
     public void reverse(int l,int r)
     {
-
+        Node start=head;
         Node current=head;
-        Node start=head; 
+        Node nextnode=head;
         Node prev=head;
-        Node nextptr=head;
         Node temp=head;
         for(int i=1;i<l-1;i++)
         {
             start=start.next;
         }
-        for(int i=1;i<l;i++)
-        {
-            current=current.next;
-        }
+        current=start.next;
         for(int i=0;i<r;i++)
         {
-            nextptr=nextptr.next;
             prev=prev.next;
             temp=temp.next;
         }
         while(current!=temp)
         {
-            nextptr=current.next;
+            nextnode=current.next;
             current.next=prev;
             prev=current;
-            current=nextptr;
+            current=nextnode;
         }
         start.next=prev;
-       
-        
+
     }
     
     public void InsertAtBeg(int newData)
@@ -72,7 +65,7 @@ public class reverseBetween {
         ll.InsertAtBeg(52);
         ll.print_Node();
         System.out.println("After reversing the Linked list: ");
-        ll.reverse(5,6);
+        ll.reverse(3,6);
         ll.print_Node();
     }
     
