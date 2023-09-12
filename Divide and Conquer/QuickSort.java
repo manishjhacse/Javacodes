@@ -2,31 +2,30 @@ import java.util.*;
 public class QuickSort {
     public static int partition(int arr[],int l,int h)
     {
-        int i=l;
         int pivot=arr[l];
-        for(int j=l+1;j<=h;j++)
-        {
-            if(arr[j]<pivot)
-            {
+        int i=l;
+        for(int j=l+1;j<=h;j++){
+            if(pivot>arr[j]){
                 i++;
                 int temp=arr[i];
                 arr[i]=arr[j];
                 arr[j]=temp;
             }
-        }
-        int temp=pivot;
+        } 
+        int temp=arr[l];
         arr[l]=arr[i];
         arr[i]=temp;
         return i;
+
     }
     public static void quick_Sort(int []arr,int l,int h)
     {
-        if(l<h)
-        {
-            int m=partition(arr,l,h);
-            quick_Sort(arr,l,m-1);
-            quick_Sort(arr, m+1, h);
-        }
+       if(l<h){
+        int pivotIndex=partition(arr, l, h);
+        quick_Sort(arr, l, pivotIndex-1);
+        quick_Sort(arr,pivotIndex+1,h);
+
+       }
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
