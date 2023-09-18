@@ -9,7 +9,7 @@ public class AssigQ2 {
                 int temp = arr[i];
                 arr[i] = arr[pIndex];
                 arr[pIndex] = temp;
-                pIndex++;
+               pIndex++;
             }
         }
     }
