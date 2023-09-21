@@ -8,7 +8,7 @@ public interface minMax {
         pair minmax = new pair();
         pair Leftminmax = new pair();
         pair Rightminmax = new pair();
-        if (l == h) {
+        if (l==h) {
             minmax.min = arr[l];
             minmax.max = arr[l];
             return minmax;
