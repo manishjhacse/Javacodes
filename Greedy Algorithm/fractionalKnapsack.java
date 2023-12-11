@@ -14,8 +14,6 @@ public class fractionalKnapsack {
                     return -1;
             }
 
-
-            
         });
 
         double totalValue = 0;
