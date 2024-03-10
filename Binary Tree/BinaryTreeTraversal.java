@@ -45,6 +45,7 @@ public class BinaryTreeTraversal {
         preOrder(root.right);
     }
 
+    
     static void levelOrderTraversal(Node root) {
         Queue<Node> q = new LinkedList<>();
         if (root == null)
