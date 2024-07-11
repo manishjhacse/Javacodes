@@ -40,6 +40,65 @@ public class Operations {
         return root;
     }
 
+    Tree getMin(Tree root) {
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root;
+    }
+
+    Tree deleteNode(Tree root, int key) {
+        Tree parent = null;
+        Tree current = root;
+        while (current != null && current.val != key) {
+            parent = current;
+            if (key < current.val)
+                current = current.left;
+            else
+                current = current.right;
+        }
+        if (current == null) {
+            return root;
+        }
+        // node to be deleted it leaf node
+        if (current.left == null && current.right == null) {
+            if (current == root) {
+                return null;
+            }
+            if (parent.left == current) {
+                parent.left = null;
+            } else {
+                parent.right = null;
+            }
+        }
+        // node to be deleted has one child node
+        else if (current.left == null || current.right == null) {
+            Tree temp = null;
+            if (current.left != null) {
+                temp = current.left;
+            } else {
+                temp = current.right;
+            }
+            if (current == root) {
+                root = temp;
+            } else if (parent.left == current) {
+                parent.left = temp;
+            } else {
+                parent.right = temp;
+            }
+
+        }
+        // node to be deleted has 2 child node
+        else {
+            Tree minRight = getMin(current.right);
+            int minVal = minRight.val;
+            deleteNode(current, minVal);
+            current.val = minVal;
+        }
+        return root;
+
+    }
+
     void inorderTraversal(Tree root) {
         if (root == null) {
             return;
@@ -52,13 +111,16 @@ public class Operations {
     public static void main(String[] args) {
         Operations obj = new Operations();
         Tree tree1 = new Tree(25);
-        obj.insertBST(tree1, 23);
-        obj.insertBST(tree1, -5);
+        tree1 = obj.insertBST(tree1, 23);
+        tree1 = obj.insertBST(tree1, -5);
         int arr[] = { 5, 4, 3, 2, 78, 69 };
-        obj.insertBSTArray(tree1, arr);
+        tree1 = obj.insertBSTArray(tree1, arr);
         obj.inorderTraversal(tree1);
         System.out.println();
         System.out.println("23 is present in BST: " + obj.searchInBST(tree1, 23));
-        System.out.println("43 is present in BST: " + obj.searchInBST(tree1, 43));
+        tree1 = obj.deleteNode(tree1, 23);
+        obj.inorderTraversal(tree1);
+        System.out.println();
+        System.out.println("23 is present in BST: " + obj.searchInBST(tree1, 23));
     }
 }
