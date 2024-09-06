@@ -31,7 +31,8 @@ class Heap<T extends Comparable<T>> {
     private int right(int index) {
         return index * 2 + 2;
     }
-    //mean heap
+
+    // mean heap
     public void insert(T val) {
         list.add(val);
         upheap(list.size() - 1);
