@@ -193,8 +193,8 @@ public class Graph1 {
         weightedUndirectedList.printWeightedList();
         System.out.println("weighted directed Graph List: ");
         weightedDirectedList.printWeightedList();
-
         undirectedGraph.getDegree(edges, 5);
-        directedGraph.getDirectedGraphDegree(edges, 5);        
+        directedGraph.getDirectedGraphDegree(edges, 5);
+
     }
 }
